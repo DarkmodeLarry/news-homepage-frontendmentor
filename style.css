@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --SoftOrange: hsl(35, 77%, 62%);
+  --SoftRed: hsl(5, 85%, 63%);
+  --Off-white: hsl(36, 100%, 99%);
+  --GrayishBlue: hsl(233, 8%, 79%);
+  --DarkGrayishBlue: hsl(236, 13%, 42%);
+  --VeryDarkBlue: hsl(240, 100%, 5%);
+  --Mobile: 375px;
+  --Desktop: 1440px;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  min-height: 100vh;
+  max-width: 1500px;
+  min-width: 100%;
+  padding: 2rem 1rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-slide {
+  position: absolute;
+  width: 75%;
+  height: 100%;
+  top: -30px;
+  right: 0;
+  /* backdrop-blur: 100px;
+  backdrop-filter: blur(10px); */
+  background-color: hsl(36, 100%, 99%);
+  display: none;
+  transition-duration: 0.4s;
+}
+
+.nav-slide ul {
+  color: hsl(240, 100%, 5%);
+  display: flex;
+  flex-direction: column;
+  font-size: 2rem;
+  margin-top: 10rem;
+  align-items: left;
+  line-height: 5rem;
+  padding-left: 3rem;
+  height: 90vh;
+}
+
+.close-wrapper {
+  display: flex;
+  justify-content: end;
+  padding: 3rem;
+  cursor: pointer;
+}
+.close-wrapper .close {
+  height: 3.5rem;
+}
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  height: 80px;
+  padding: 1rem;
+}
+
+li {
+  cursor: pointer;
+}
+li:hover {
+  color: hsl(1, 85%, 63%);
+  transition-duration: 0.3s;
+}
+button:hover {
+  background-color: hsl(240, 100%, 5%);
+  transition-duration: 0.3s;
+  cursor: pointer;
+}
+
+.logo {
+  height: 40px;
+}
+
+.hamburger {
+  height: 25px;
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+  display: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-mobile {
+  min-width: 350px;
+  max-width: 100%;
+  padding: 1rem;
+}
+
+.hero-desktop {
+  display: none;
+
+  max-width: 600px;
+}
+
+.intro h1 {
+  font-size: 3.2rem;
+  font-weight: 900;
+  padding-right: 5rem;
+}
+
+.intro p {
+  padding-top: 1rem;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  color: hsl(236, 13%, 42%);
+  margin: 1rem 0rem 2rem 0rem;
+}
+button {
+  background: hsl(1, 85%, 63%);
+  color: hsl(36, 100%, 99%);
+  text-transform: uppercase;
+  padding: 1.2rem 3rem;
+  margin-bottom: 2rem;
+  border-radius: 2px;
+  font-weight: 600;
+  font-size: 1.2rem;
+  letter-spacing: 0.2rem;
+  border: none;
+  color: hsl(36, 100%, 99%);
+}
+
+.intro {
+  margin-top: 1.5rem;
+}
+
+.new {
+  background: hsl(240, 100%, 5%);
+  padding: 1rem 1.5rem;
+  border-radius: 3px;
+  margin-top: 3rem;
+}
+
+.new h2 {
+  color: hsl(36, 77%, 62%);
+  font-size: 2.5rem;
+}
+
+.new h4 {
+  color: hsl(36, 100%, 99%);
+  padding: 1.5rem 0rem;
+  font-size: 1.5rem;
+}
+
+.newP {
+  color: hsl(236, 13%, 65%);
+  border-bottom: 1px solid hsl(236, 13%, 42%);
+  font-size: 1rem;
+  line-height: 1.8rem;
+}
+
+.new-bottom {
+  border: none;
+  color: hsl(236, 13%, 65%);
+  font-size: 1rem;
+  line-height: 1.8rem;
+}
+
+.links {
+  background-color: white;
+  margin-top: 4rem;
+  min-height: 400px;
+  max-height: 400px;
+  width: 100%;
+  padding: 0rem 1rem;
+}
+.link-wrap {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.image-link {
+  aspect-ratio: inherit;
+  height: 175px;
+  margin: 1rem 1.8rem 2rem 0rem;
+}
+
+.article {
+  display: flex;
+  flex-direction: column;
+}
+.number {
+  color: hsl(233, 8%, 79%);
+  font-weight: 600;
+  font-size: 2.5rem;
+  letter-spacing: 0.1rem;
+}
+.title {
+  color: hsl(240, 100%, 5%);
+  font-weight: 800;
+  font-size: 1.4rem;
+  padding: 1rem 0px;
+}
+
+.headline {
+  color: hsl(233, 8%, 60%);
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 2rem;
+  letter-spacing: 0.4px;
+  padding-bottom: 1.8rem;
+}
+
+@media screen and (min-width: 850px) {
+  body {
+    max-height: 100vh;
+    overflow-y: hidden;
+  }
+
+  .container {
+    justify-content: space-between;
+    margin-top: 3rem;
+  }
+
+  .nav {
+    padding: 5rem 15rem 3rem 15rem;
+  }
+
+  .hamburger {
+    display: none;
+  }
+  ul {
+    display: flex;
+    gap: 2.5rem;
+    font-size: 1.2rem;
+    opacity: 0.6;
+  }
+  .hero-mobile {
+    display: none;
+  }
+  .hero-wrap {
+    display: flex;
+    flex-direction: column;
+    width: 58rem;
+  }
+  .desktop-wrap {
+    display: flex;
+  }
+  .hero-desktop {
+    display: inline-block;
+    max-height: 400px;
+    max-width: 97%;
+    aspect-ratio: inherit;
+  }
+  .intro {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+  }
+  .intro h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    max-width: 46%;
+  }
+  .intro p {
+    font-size: 1.1rem;
+  }
+  .intro-wrap {
+    width: 49%;
+  }
+
+  .new {
+    max-width: 27rem;
+    margin-top: 0;
+  }
+  .links {
+    display: flex;
+    padding: 0rem 13rem 5rem 13rem;
+  }
+  .image-link {
+    min-height: auto;
+    max-width: 100%;
+  }
+  .article {
+  }
+}
+/* 
+
+Here is a sample code for using the ::before and ::after pseudo-elements in a click transition:
+
+css
+Copy code
+button {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button::before,
+button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: transform 0.3s ease-out;
+}
+
+button::before {
+  background-color: #fff;
+  transform: scale(1.5);
+  opacity: 0;
+}
+
+button:hover::before {
+  opacity: 1;
+  transform: scale(1);
+}
+
+button::after {
+  content: 'Click me';
+  color: #333;
+  opacity: 0;
+  transform: translateY(-100%);
+}
+
+button:hover::after {
+  opacity: 1;
+  transform: translateY(0); */
